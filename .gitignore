@@ -1,3 +1,5 @@
+.skbuild-info.json
+
 # Compiled source #
 ###################
 *.pyc
@@ -75,3 +77,7 @@ mpir.dll
 
 # cibuildwheel
 wheelhouse
+
+# Build directories
+*-build/
+.cmake/
