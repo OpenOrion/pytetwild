@@ -44,7 +44,6 @@ test-requires = "pytest pyvista scipy meshio"
 test-command = "pytest {project}/tests -v"
 
 [tool.cibuildwheel.linux]
-before-all = "yum install gmp gmp-devel -y"
 environment = "USE_MAVX='true'"
 environment-pass = ["USE_MAVX"]
 

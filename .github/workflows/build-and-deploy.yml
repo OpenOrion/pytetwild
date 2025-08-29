@@ -42,6 +42,12 @@ jobs:
           echo "GMP_INC=C:\Miniconda\envs\test\Library\include" >> ${env:GITHUB_ENV}
           echo "GMP_LIB=C:\Miniconda\envs\test\Library\lib" >> ${env:GITHUB_ENV}
 
+      - name: Install GMP dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgmp-dev
+
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.16.5
 
